@@ -37,3 +37,5 @@ jobs:
         run: |
           echo "Plataforma de despliegue: ${{ env.platform }}"
           echo "Entorno de cuenta: ${{ env.account }}"
+      - name: Debug del payload completo
+        run: echo "${{ toJSON(github.event) }}"
