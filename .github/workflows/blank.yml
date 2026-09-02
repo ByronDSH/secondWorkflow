@@ -39,3 +39,7 @@ jobs:
           echo "Entorno de cuenta: ${{ env.account }}"
       - name: Debug del payload completo
         run: echo "${{ toJSON(github.event) }}"
+      - name: Mostrar Metadatos Básicos
+        run: |
+          echo "Usuario ejecutor: ${{ github.actor }}"
+          echo "Repositorio activo: ${{ github.repository }}"
