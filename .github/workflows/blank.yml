@@ -32,8 +32,8 @@ jobs:
         run: echo Hola, Mundo!
 
       # Runs a set of commands using the runners shell
+        if: env.platform == 'aws'
       - name: Auditoría de variables de entorno
         run: |
           echo "Plataforma de despliegue: ${{ env.platform }}"
-          echo "Región asignada: ${{ env.region }}"
           echo "Entorno de cuenta: ${{ env.account }}"
